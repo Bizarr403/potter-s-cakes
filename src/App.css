@@ -1,38 +1,302 @@
-.App {
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+body{
+/* background-color: #F7F7F7;
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  scrollbar-width: 0px;
+  scroll-behavior: smooth;*/
+  background-color: #FFF5E1; /* Light Cream */
+  font-family: Arial, sans-serif;
+  color: #5D4037; /* Chocolate Brown */
+  margin: 0;
+  padding: 0;
+  overflow:auto;
+}
+
+  
+.navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  border-radius: 0px;
+  margin-top: 0px;
+  height: 100%;
+  
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FADADD;
+}
+.navbar ul{
+  display: flex;
+  position: relative;
+  right: 100px;
+}
+.navbar li,a{
+  list-style: none;
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 5px;
+  color: #8D6E63;
+  font-family: "Roboto", sans-serif;
+font-weight: 300;
+font-style: normal;
+
+}
+.navbar a:hover{
+  color: #FF6B6B;
+}
+.navbar p{
+  font-family: "Cedarville Cursive", cursive;
+font-weight: 400;
+font-size: larger;
+font-style: normal;
+margin-right: 20px;
+  padding: 5px;
+  color: white;
+}*/
+header {
+  background-color: #FADADD; /* Pastel Pink */
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header .logo {
+  color: #5D4037; /* Chocolate Brown */
+  font-size: 24px;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header nav ul {
+  list-style: none;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 20px;
+}
+
+header nav a {
+  color: #8D6E63; /* Light Chocolate Brown */
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: #FF6B6B; /* Coral Pink on hover */
+}
+.slink{
+  position: relative;
+  left: 180px;
+}
+.logo{
+  position: relative;
+  right: 250px;
+  color: #5D4037;
+}
+.section{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 100px;
+  margin-top: 30px;
+
+   /*border-radius: 20px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);*/
+  
+}
+
+
+.desc{
+  display: flex;
   color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal; 
+}
+.header{
+  text-align: left;
+  color: white;
+  font-family: "Cedarville Cursive", cursive;
+font-weight: 400;
+font-size: xx-large;
+font-style: normal;
+}
+.image{
+  position: relative;
+  left: 5px;
+   height: 100px;
+  width: 80px;
+  position: relative;
+  right: 60px;
+}
+.call{
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  position: relative;
+  background-color: #c77b2a;
+  bottom: 10px;
+  border-radius: 20px;
+  padding: 15px;
+}
+.price{
+  color: white;
+  width: fit-content;
+  padding: 15px;
+  border-radius: 20px;
+  position: relative;
+  right: 150px;
+  bottom: 10px;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 30px;
+}
+.info{
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+}
+.info div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 150px;
+  bottom: 10px;
+}
+.fa-arrow-left{
+  color: white;
+  position: relative;
+  bottom: 180px;
+  left: 10px;
+}
+.fa-arrow-right{
+  color: white;
+  position: relative;
+  bottom: 180px;
+  left: 1200px;
+}
+.hero{
+
+    
+    background-image: url('../src/images/pixlr-image-generator-e1ef31d1-fe8e-41c7-917b-371ce474fa60.png') no-repeat center center/cover;
+   
+  position: relative;
+  color: #5D4037; /* Chocolate Brown */
+  text-align: center;
+  padding: 100px 20px;
+  
+
+}
+.hero::before {
+  content: '';
+  background-color: rgba(250, 218, 221, 0.8); /* Soft Pink overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.hero h1{
+  font-size: 48px;
+  z-index: 1;
+  position: relative;
+}
+.hero h2,p { position: relative;z-index: 1;}
+.hero .cta-button{background-color: #FF6B6B; /* Coral Pink */
+  color: #FFFFFF;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+  top: 5px;
+
+}
+  .hero .cta-button:hover {
+    background-color: #FFD166; /* Warm Yellow on hover */
+  }
+/* CSS Transition for Image Slide */
+.featured-products {
+  
+  background-color: #FFFFFF; /* White */
+  padding: 50px 20px;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.product-card {
+  background-color: #FFF5E1; /* Light Cream */
+  border: 2px solid #D8F3DC; /* Pastel Mint */
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  display: inline-block;
+  width: 200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.product-card h3 {
+  color: #5D4037; /* Chocolate Brown */
+}
+
+.product-price {
+  color: #FF6B6B; /* Coral Pink */
+  font-weight: bold;
+}
+.about-us {
+  background-color: #CFE8E8; /* Light Mint */
+  padding: 50px 20px;
+  color: #5D4037; /* Chocolate Brown */
+  text-align: center;
+}
+
+.about-us h2 {
+  color: #FFC107; /* Gold */
+}
+
+.about-us p {
+  color: #5D4037;
+  text-align: left;
+  line-height: 20px;
+}
+footer {
+  background-color: #3B2F2F; /* Rich Chocolate Brown */
+  color: #FFFFFF; /* White */
+  padding: 30px 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #FF6B6B; /* Coral Pink */
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+footer a:hover {
+  color: #FFC107; /* Gold on hover */
+}
+
+.social-media-icons i {
+  color: #64C7B9; /* Mint Green */
+  padding: 0 10px;
+  font-size: 24px;
+  transition: 0.3s;
+}
+
+.social-media-icons i:hover {
+  color: #FF6B6B; /* Coral Pink */
+  
+ position: relative;
+ left:600px;
 }
